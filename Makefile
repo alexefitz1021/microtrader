@@ -11,8 +11,7 @@ TEST_DIR ?= build/test-results/junit/
 
 #AWS ECR Settings
 DOCKER_REGISTRY ?= 416733580780.dkr.ecr.us-west-1.amazonaws.com
-AWS_ACCOUNT_ID ?= 416733580780
-DOCKER_LOGIN_EXPRESSION := eval $$(aws ecr get-login --registry-ids $$(AWS_ACCOUNT_ID))
+DOCKER_LOGIN_EXPRESSION := eval $$(aws ecr get-login --registry-ids 416733580780 --no-include-email)
 
 # Release settings
 export HTTP_PORT ?= 8000
